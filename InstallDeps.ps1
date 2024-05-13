@@ -8,5 +8,5 @@ Expand-Archive -Path .\flutter_windows_3.19.6-stable.zip -DestinationPath $env:U
 echo "Extraido"
 
 echo "Configurando Path"
-$env:Path += ';%USERPROFILE%\dev\flutter\bin'
+$env:Path += ";$env:USERPROFILE\dev\flutter\bin"
 echo "Path Configurado'"

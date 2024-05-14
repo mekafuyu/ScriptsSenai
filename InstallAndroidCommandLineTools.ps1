@@ -7,7 +7,9 @@ mkdir $InstallPath\Android\ -ea 0
 Write-Output "> Pasta Criada"
 
 Write-Output "> Inciando Extração..."
-Expand-Archive -Path ".\commandlinetools-win-11076708_latest.zip" -DestinationPath "$InstallPath\Android\latest" -F
+Expand-Archive -Path ".\commandlinetools-win-11076708_latest.zip" -DestinationPath "$InstallPath\Android" -Force
+mkdir $InstallPath\Android\cmdline-tools\latest -ea 0
+mv "$InstallPath\Android\cmdline-tools\*" "$InstallPath\Android\cmdline-tools\latest"
 Write-Output "> Extraído para: $InstallPath\Android\"
 
 Write-Output "> Configurando Path..."
